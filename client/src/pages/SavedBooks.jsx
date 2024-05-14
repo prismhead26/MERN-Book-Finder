@@ -34,7 +34,7 @@ const SavedBooks = () => {
 
     try {
       // execute the REMOVE_BOOK mutation and pass the bookId as the param
-      const response = await deleteBook(token, {
+      const response = await deleteBook({
         variables: { bookId }
       });
 
