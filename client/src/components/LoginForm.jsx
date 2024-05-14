@@ -2,9 +2,9 @@
 import { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 
-// import { loginUser } from '../utils/API';
+// import useMutation from apollo client and import LOGIN_USER mutation
 import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../utils/mutations';
+import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
@@ -13,7 +13,8 @@ const LoginForm = () => {
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
-  const [addUser, {error}] = useMutation(ADD_USER)
+  // use LOGIN_USER mutation
+  const [login, {error}] = useMutation(LOGIN_USER)
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -31,7 +32,8 @@ const LoginForm = () => {
     }
 
     try {
-      const response = await addUser({
+      // add userFormData to login mutation variables and call login mutation
+      const response = await login({
         variables: { ...userFormData }
       });
 
@@ -91,7 +93,7 @@ const LoginForm = () => {
           variant='success'>
           Submit
         </Button>
-        
+        {/* display error */}
         {error && <div>{error.message}</div>}
 
       </Form>
