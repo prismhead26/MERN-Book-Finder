@@ -28,9 +28,11 @@ const SearchBooks = () => {
   // use useMutation hook to execute the SAVE_BOOK mutation in the handleSaveBook function
   const [saveBook, { error }] = useMutation(SAVE_BOOK);
 
+
   // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
   // learn more here: https://reactjs.org/docs/hooks-effect.html#effects-with-cleanup
   useEffect(() => {
+    // console.log('savedBookIds', savedBookIds);
     return () => saveBookIds(savedBookIds);
   });
 
@@ -44,6 +46,7 @@ const SearchBooks = () => {
 
     try {
       const response = await searchGoogleBooks(searchInput);
+      console.log('response', response);
 
       if (!response.ok) {
         throw new Error('something went wrong!');
@@ -73,17 +76,18 @@ const SearchBooks = () => {
 
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
+    // console.log('token', token);
+    // console.log('bookToSave', bookToSave);
 
     if (!token) {
       return false;
     }
-
     try {
-      const response = await saveBook({
-        variables: { bookData: { ...bookToSave } },
+      const { data } = await saveBook({
+        variables: { bookInput: { ...bookToSave } },
       });
 
-      if (!response.ok) {
+      if (!data === null || !data === undefined) {
         throw new Error('something went wrong!');
       }
 

@@ -33,15 +33,15 @@ const LoginForm = () => {
 
     try {
       // add userFormData to login mutation variables and call login mutation
-      const response = await login({
+      const { data } = await login({
         variables: { ...userFormData }
       });
-
-      if (!response.ok) {
+      console.log('user data', data)
+      if (!data === null || !data === undefined) {
         throw new Error('something went wrong!');
       }
 
-      const { token, user } = await response.json();
+      const { login: { token, user } } = data;
       console.log(user);
       Auth.login(token);
     } catch (err) {

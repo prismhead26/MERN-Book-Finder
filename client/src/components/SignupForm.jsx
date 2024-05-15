@@ -39,11 +39,11 @@ const SignupForm = () => {
       const { data } = await addUser({
         variables: { ...userFormData }
       });
-      console.log("response", data)
+      console.log("user data", data)
       if (!data === null || !data === undefined) {
         throw new Error('something went wrong!');
       }
-
+      // layer destructuring
       const { addUser: { token, user } } = data;
       console.log("user", user);
       console.log('token', token);
