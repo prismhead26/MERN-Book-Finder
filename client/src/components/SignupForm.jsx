@@ -35,16 +35,18 @@ const SignupForm = () => {
 
     try {
       // add userFormData to addUser mutation variables and call addUser mutation
-      const response = await addUser({
+      console.log('handleFormSubmit', userFormData)
+      const { data } = await addUser({
         variables: { ...userFormData }
       });
-
-      if (!response.ok) {
+      console.log("response", data)
+      if (!data === null || !data === undefined) {
         throw new Error('something went wrong!');
       }
 
-      const { token, user } = await response.json();
-      console.log(user);
+      const { addUser: { token, user } } = data;
+      console.log("user", user);
+      console.log('token', token);
       Auth.login(token);
     } catch (err) {
       console.error(err);
