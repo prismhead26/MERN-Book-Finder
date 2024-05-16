@@ -12,6 +12,7 @@ import { removeBookId } from "../utils/localStorage";
 const SavedBooks = () => {
   // use useQuery Hook to execute the GET_ME query inside the SavedBooks component
   const { loading, data } = useQuery(GET_ME);
+  console.log("data", data);
 
   // extract data from the GET_ME query's response, renaming it to userData
   const userData = data?.me || {};
@@ -30,11 +31,11 @@ const SavedBooks = () => {
 
     try {
       // execute the REMOVE_BOOK mutation and pass the bookId as the param
-      const response = await removeBook({
+      const { data } = await removeBook({
         variables: { bookId },
       });
 
-      if (!response.ok) {
+      if (!data === null || !data === undefined) {
         throw new Error("something went wrong!");
       }
 
