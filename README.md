@@ -2,9 +2,9 @@
 
 ## Description:
 
-The main goal of this project is to create a portfolio using your new React skills, which will help set you apart from other developers whose portfolios don’t use the latest technologies.
+The main goal of this project is take a RESTful API, and refactor it to be a GraphQL API built with Apollo Server. The app was built using the MERN stack with a React front end, MongoDB database, and Node.js/Express.js server and API.
 
-After completion of the project, I have a better understanding on building an application with user React, Vite, and third-party npm packages to improve the functionality, user experience, and render the DOM. I also learned how to use route handlers effectively with react-router, using hooks that allow access to the state and other React features. And lastly I learned some better ways to manipulate the V-DOM by using event delegation and passing props to components, afterwards building and rendering to the DOM. And I had a blast figuring out the dark mode feature as well as configuring the React set-up.
+After completion of the project, I have a better understanding on building a full stack MERN application with React Router, GraphQL, and the React library to improve the functionality, user experience, and create the VDOM to check and render the DOM. I also learned how to use reducers, mutations, and queries effectively to access and manipulate data. And lastly I learned how to use JSON Web Token, or JWT, to add authentication to the site.
 
 ## Table of Contents:
 
@@ -35,23 +35,23 @@ Step 3: Open integrated terminal once in the main folder.
 <br>
 Step 4: "run npm i" / "sudo npm i" in the terminal to install the required dependencies.
 <br>
-Step 6: Now to run the application, Enter "npm run build" or "npm run dev" for development.
+Step 6: Now to run the application, Enter "npm run build" and then "npm run start", or  just "npm run develop" for development.
 <br>
 Step 7: After the "VITE v5.2.10 ready in 267 ms" appears in the console, open the local host URL that's displayed in the console if you haven't automatically directed to the application.
 
 ## Links
 
 Screenshots:
-![About-Me](./assets/images/aboutMe.png)
+![searchPage](./assets/images/searchPage.png)
 
-![Dark-Mode](./assets/images/darkMode.png)
+![savePage](./assets/images/savedBooks.png)
 
 Render link:
 [Render Link](https://aidens-react-portfolio.netlify.app/)
 
 ## Features:
 
-Javascript variables, destructuring, classes and constructors, promises, try/catch methods, async/await methods, event delegation, etc.
+Javascript variables, layered destructuring, hooks, reducers, mutations, queries, try/catch methods, async/await methods, event delegation, etc.
 
 ## Built With:
 
@@ -60,6 +60,9 @@ Javascript variables, destructuring, classes and constructors, promises, try/cat
 - CSS
 - React
 - GrahpQL
+- JWT
+- Express
+- Apollo Server
 - MongoDB
 - Dotenv
 - Vite
@@ -82,4 +85,4 @@ Licensed under the The MIT License license.
 For additional questions or concerns, feel free to contact me via [prismhead26@gmail.com](http://prismhead26@gmail.com).
 You can also find me on Github at [prismhead26](https://github.com/prismhead26).
 
-© 2024 Aiden Wahed. All Rights Reserved.
+© 2024 Aiden Wahed. Confidential and Proprietary. All Rights Reserved.
