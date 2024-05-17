@@ -47,7 +47,7 @@ Screenshots:
 ![savePage](./Assets/images/savedBooks.png)
 
 Render link:
-[Render Link](https://aidens-react-portfolio.netlify.app/)
+[Render Link](https://github.com/prismhead26/MERN-Book-Finder)
 
 ## Features:
 
@@ -72,7 +72,7 @@ Javascript variables, layered destructuring, hooks, reducers, mutations, queries
 
 ## Test Instructions:
 
-For testing and debugging, the application logs requests and errors in the console. Unit testing not configured.
+For testing and debugging, the application logs requests and errors in the console. Unit testing not configured. For further debugging feel free to check the sources in Dev Tools for front-end and JavaScript Debug Terminal for backend.
 
 ## License:
 
