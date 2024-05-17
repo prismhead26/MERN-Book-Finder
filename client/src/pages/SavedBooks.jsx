@@ -12,11 +12,9 @@ import { removeBookId } from "../utils/localStorage";
 const SavedBooks = () => {
   // use useQuery Hook to execute the GET_ME query inside the SavedBooks component
   const { loading, data } = useQuery(GET_ME);
-  console.log("data", data);
 
   // extract data from the GET_ME query's response, renaming it to userData
   const userData = data?.me || {};
-  console.log("userData", userData);
 
   // use the useMutation Hook to execute the REMOVE_BOOK mutation
   const [removeBook, { error }] = useMutation(REMOVE_BOOK);

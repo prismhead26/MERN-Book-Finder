@@ -36,7 +36,7 @@ const LoginForm = () => {
       const { data } = await login({
         variables: { ...userFormData }
       });
-      console.log('user data', data)
+      // console.log('user data', data)
       if (!data === null || !data === undefined) {
         throw new Error('something went wrong!');
       }

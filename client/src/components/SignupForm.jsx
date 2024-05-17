@@ -39,7 +39,7 @@ const SignupForm = () => {
 
     try {
       // add userFormData to addUser mutation variables and call addUser mutation
-      console.log("handleFormSubmit", userFormData);
+      // console.log("handleFormSubmit", userFormData);
       const { data } = await addUser({
         variables: { ...userFormData },
       });
@@ -50,7 +50,7 @@ const SignupForm = () => {
       const {
         addUser: { token, user },
       } = await data;
-      console.log(user);
+      // console.log(user);
       Auth.login(token);
     } catch (err) {
       console.error(err);
