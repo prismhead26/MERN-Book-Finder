@@ -35,16 +35,16 @@ Step 3: Open integrated terminal once in the main folder.
 <br>
 Step 4: "run npm i" / "sudo npm i" in the terminal to install the required dependencies.
 <br>
-Step 6: Now to run the application, Enter "npm run build" and then "npm run start", or  just "npm run develop" for development.
+Step 6: Now to run the application, Enter "npm run build" and then "npm run start", or just "npm run develop" for development.
 <br>
 Step 7: After the "VITE v5.2.10 ready in 267 ms" appears in the console, open the local host URL that's displayed in the console if you haven't automatically directed to the application.
 
 ## Links
 
 Screenshots:
-![searchPage](./assets/images/searchPage.png)
+![searchPage](./Assets/images/searchPage.png)
 
-![savePage](./assets/images/savedBooks.png)
+![savePage](./Assets/images/savedBooks.png)
 
 Render link:
 [Render Link](https://aidens-react-portfolio.netlify.app/)
