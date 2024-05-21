@@ -29,15 +29,15 @@ Step 4: Nodemon is recommended in order to refresh and see updated notes data.
 
 ## Usage Instructions:
 
-Step 2: Open VsCode(preferred) or another source-code editor if not already running.
+Step 1: Open VsCode(preferred) or another source-code editor if not already running.
 <br>
-Step 3: Open integrated terminal once in the main folder.
+Step 2: Open integrated terminal once in the main folder.
 <br>
-Step 4: "run npm i" / "sudo npm i" in the terminal to install the required dependencies.
+Step 3: "run npm i" / "sudo npm i" in the terminal to install the required dependencies.
 <br>
-Step 6: Now to run the application, Enter "npm run build" and then "npm run start", or just "npm run develop" for development.
+Step 4: Now to run the application, Enter "npm run build" and then "npm run start", or just "npm run develop" for development.
 <br>
-Step 7: After the "VITE v5.2.10 ready in 267 ms" appears in the console, open the local host URL that's displayed in the console if you haven't automatically directed to the application.
+Step 5: After the "VITE v5.2.10 ready in 267 ms" appears in the console, open the local host URL that's displayed in the console if you haven't automatically directed to the application.
 
 ## Links
 
